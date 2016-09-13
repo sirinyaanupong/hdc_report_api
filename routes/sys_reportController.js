@@ -18,8 +18,6 @@ router.post('/getSys_reportByIdAndYear', function (req, res) {
 
       var tableName = rows[0].source_table;
 
-      console.log('tableName: '+tableName);
-
       Sys_reportService.getResultByYear(db, tableName, year)
         .then(function(rows){
           res.send({ ok: true, rows: rows });
