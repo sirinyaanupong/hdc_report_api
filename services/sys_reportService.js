@@ -2,6 +2,7 @@ module.exports = {
 	getResultByYear: function(db, tableName, year){
 		return db(tableName)
 			.select()
-			.where('b_year', year);
+			.where('b_year', year)
+			.limit(5);
 	},
 };
